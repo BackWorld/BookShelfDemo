@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DPk-QP-Pha">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--书架demo-->
+        <scene sceneID="M5s-2N-2JW">
+            <objects>
+                <collectionViewController id="1ns-RZ-5oL" customClass="MainViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="V8d-i6-Y4g" customClass="ZXHCollectionView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="80" minimumInteritemSpacing="20" id="qWO-5t-Sy0">
+                            <size key="itemSize" width="120" height="140"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="50" minY="50" maxX="50" maxY="50"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="nhn-Mi-41M">
+                                <rect key="frame" x="50" y="114" width="120" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book2" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-OF-HWz">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.015371523999999999" green="0.63220091540000001" blue="0.3788856001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="v1b-OF-HWz" secondAttribute="bottom" constant="-8" id="7M0-Md-g0Y"/>
+                                    <constraint firstItem="v1b-OF-HWz" firstAttribute="leading" secondItem="nhn-Mi-41M" secondAttribute="leadingMargin" constant="-8" id="L49-Su-Qsd"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="v1b-OF-HWz" secondAttribute="trailing" constant="-8" id="doG-7n-oxv"/>
+                                    <constraint firstItem="v1b-OF-HWz" firstAttribute="top" secondItem="nhn-Mi-41M" secondAttribute="topMargin" constant="-8" id="jOx-G7-x5R"/>
+                                </constraints>
+                                <size key="customSize" width="120" height="140"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="1ns-RZ-5oL" id="wse-e8-Hc8"/>
+                            <outlet property="delegate" destination="1ns-RZ-5oL" id="yvl-JB-7pH"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="书架demo" id="dv3-kL-iNn"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nzn-Sz-D4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="386"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uzc-61-j5v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DPk-QP-Pha" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2lX-wQ-0eM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1ns-RZ-5oL" kind="relationship" relationship="rootViewController" id="6ho-43-S69"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yc-6K-58Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="731" y="386"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book2" width="178" height="236"/>
+    </resources>
+</document>

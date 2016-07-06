@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
+            <connections>
+                <outlet property="bookImgHeightCons" destination="Cjx-5d-p1g" id="Uxm-vh-vY7"/>
+                <outlet property="bookImgView" destination="pzJ-oe-9qZ" id="NtM-AM-UsS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="dCB-Ub-uvG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INp-tu-3uN">
+                    <rect key="frame" x="50" y="50" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="0Cd-4M-Ip4"/>
+                        <constraint firstAttribute="height" constant="36" id="vVU-1i-My9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="uGO-8y-xVz"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ave-PO-seR">
+                    <rect key="frame" x="720" y="159" width="254" height="450"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="紫藤萝瀑布" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeA-Qf-NQr">
+                            <rect key="frame" x="0.0" y="0.0" width="254" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="gPe-h8-Zh7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上传者：李晓明 / 计算机科学与技术" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blJ-sn-Zmy">
+                            <rect key="frame" x="0.0" y="70" width="254" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="tg1-q7-d57"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分    类：语文课程" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44d-pK-Wpx">
+                            <rect key="frame" x="0.0" y="102" width="254" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="UAK-Y8-VOH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大    小：20M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhR-cb-aYn">
+                            <rect key="frame" x="0.0" y="134" width="254" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="Yov-rR-GRt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="简介：这是一本很好的书" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP4-yN-Xr3">
+                            <rect key="frame" x="-5" y="176" width="259" height="200"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="pry-SK-bN6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ima-xu-r5T">
+                            <rect key="frame" x="-13" y="415" width="280" height="35"/>
+                            <color key="backgroundColor" red="0.015371523999999999" green="0.63220091540000001" blue="0.3788856001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="DGM-Ek-kV6"/>
+                                <constraint firstAttribute="width" constant="280" id="Xus-RF-0VT"/>
+                            </constraints>
+                            <state key="normal" title="下    载">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="addDownload:" destination="-1" eventType="touchUpInside" id="1oE-gn-sTP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="kP4-yN-Xr3" secondAttribute="trailing" id="0ib-YD-1iG"/>
+                        <constraint firstItem="44d-pK-Wpx" firstAttribute="leading" secondItem="ave-PO-seR" secondAttribute="leading" id="AW0-5E-JAZ"/>
+                        <constraint firstAttribute="trailing" secondItem="blJ-sn-Zmy" secondAttribute="trailing" id="BYL-JQ-Uc4"/>
+                        <constraint firstItem="lhR-cb-aYn" firstAttribute="leading" secondItem="ave-PO-seR" secondAttribute="leading" id="FQe-ng-XjQ"/>
+                        <constraint firstAttribute="centerX" secondItem="ima-xu-r5T" secondAttribute="centerX" id="JGw-Uy-y4T"/>
+                        <constraint firstAttribute="trailing" secondItem="UeA-Qf-NQr" secondAttribute="trailing" id="Kqc-XK-rhS"/>
+                        <constraint firstItem="UeA-Qf-NQr" firstAttribute="top" secondItem="ave-PO-seR" secondAttribute="top" id="NYY-cF-phx"/>
+                        <constraint firstAttribute="trailing" secondItem="lhR-cb-aYn" secondAttribute="trailing" id="ReX-mo-54i"/>
+                        <constraint firstItem="blJ-sn-Zmy" firstAttribute="leading" secondItem="ave-PO-seR" secondAttribute="leading" id="Z4H-O5-4jn"/>
+                        <constraint firstItem="blJ-sn-Zmy" firstAttribute="top" secondItem="UeA-Qf-NQr" secondAttribute="bottom" constant="30" id="ave-zB-YcU"/>
+                        <constraint firstAttribute="height" constant="450" id="dhf-k4-jII"/>
+                        <constraint firstItem="kP4-yN-Xr3" firstAttribute="leading" secondItem="ave-PO-seR" secondAttribute="leading" constant="-5" id="ep6-5l-SgT"/>
+                        <constraint firstItem="44d-pK-Wpx" firstAttribute="top" secondItem="blJ-sn-Zmy" secondAttribute="bottom" constant="10" id="ghy-DC-gxC"/>
+                        <constraint firstAttribute="bottom" secondItem="ima-xu-r5T" secondAttribute="bottom" id="hMW-TR-3CT"/>
+                        <constraint firstAttribute="trailing" secondItem="44d-pK-Wpx" secondAttribute="trailing" id="vna-ss-EEC"/>
+                        <constraint firstItem="lhR-cb-aYn" firstAttribute="top" secondItem="44d-pK-Wpx" secondAttribute="bottom" constant="10" id="wUI-5s-2vM"/>
+                        <constraint firstItem="kP4-yN-Xr3" firstAttribute="top" secondItem="lhR-cb-aYn" secondAttribute="bottom" constant="20" id="xdD-GQ-Aai"/>
+                        <constraint firstItem="UeA-Qf-NQr" firstAttribute="leading" secondItem="ave-PO-seR" secondAttribute="leading" id="xtt-oy-9GP"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book2" translatesAutoresizingMaskIntoConstraints="NO" id="pzJ-oe-9qZ">
+                    <rect key="frame" x="416" y="159" width="254" height="236"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="450" id="Cjx-5d-p1g"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.95000000000000007" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ave-PO-seR" firstAttribute="top" secondItem="pzJ-oe-9qZ" secondAttribute="top" id="7Er-L5-6m1"/>
+                <constraint firstItem="ave-PO-seR" firstAttribute="leading" secondItem="pzJ-oe-9qZ" secondAttribute="trailing" constant="50" id="D4z-YA-cu6"/>
+                <constraint firstAttribute="centerY" secondItem="ave-PO-seR" secondAttribute="centerY" id="Hhg-Za-D3S"/>
+                <constraint firstItem="INp-tu-3uN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="Mlz-UJ-Nsp"/>
+                <constraint firstItem="ave-PO-seR" firstAttribute="leading" secondItem="pzJ-oe-9qZ" secondAttribute="trailing" constant="50" id="Ton-Iq-cmP"/>
+                <constraint firstItem="pzJ-oe-9qZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gtX-mJ-Ejk"/>
+                <constraint firstAttribute="trailing" secondItem="ave-PO-seR" secondAttribute="trailing" constant="50" id="nGa-gu-D7r"/>
+                <constraint firstItem="ave-PO-seR" firstAttribute="width" relation="lessThanOrEqual" secondItem="pzJ-oe-9qZ" secondAttribute="width" id="ydO-8m-TVF"/>
+                <constraint firstItem="INp-tu-3uN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="zW4-G7-eWi"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="D4z-YA-cu6"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="342" y="270"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="book2" width="178" height="236"/>
+    </resources>
+</document>
