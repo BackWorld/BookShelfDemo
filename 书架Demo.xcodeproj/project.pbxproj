@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80B739821D2CEB3700068097 /* ZXHCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B739811D2CEB3700068097 /* ZXHCollectionView.m */; };
+		80B739891D2D099A00068097 /* ZXHCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B739861D2D099A00068097 /* ZXHCollectionView.m */; };
+		80B7398A1D2D099A00068097 /* ZXHDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B739881D2D099A00068097 /* ZXHDecorationView.m */; };
 		80B763E61BA26A8F002B4B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B763E51BA26A8F002B4B97 /* main.m */; };
 		80B763E91BA26A8F002B4B97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B763E81BA26A8F002B4B97 /* AppDelegate.m */; };
 		80B763EF1BA26A8F002B4B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B763ED1BA26A8F002B4B97 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		80B763F41BA26A8F002B4B97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B763F21BA26A8F002B4B97 /* LaunchScreen.xib */; };
 		80B764001BA26A90002B4B97 /* __DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B763FF1BA26A90002B4B97 /* __DemoTests.m */; };
 		80B7640D1BA2707B002B4B97 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B7640C1BA2707B002B4B97 /* MainViewController.m */; };
-		80D3FC271BA2BBFD00BA467C /* ZXHDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3FC261BA2BBFD00BA467C /* ZXHDecorationView.m */; };
 		80D3FC2B1BA2D5F700BA467C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3FC291BA2D5F700BA467C /* DetailViewController.m */; };
 		80D3FC2C1BA2D5F700BA467C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3FC2A1BA2D5F700BA467C /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
@@ -31,8 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		80B739801D2CEB3700068097 /* ZXHCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXHCollectionView.h; sourceTree = "<group>"; };
-		80B739811D2CEB3700068097 /* ZXHCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXHCollectionView.m; sourceTree = "<group>"; };
+		80B739851D2D099A00068097 /* ZXHCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXHCollectionView.h; sourceTree = "<group>"; };
+		80B739861D2D099A00068097 /* ZXHCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXHCollectionView.m; sourceTree = "<group>"; };
+		80B739871D2D099A00068097 /* ZXHDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXHDecorationView.h; sourceTree = "<group>"; };
+		80B739881D2D099A00068097 /* ZXHDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXHDecorationView.m; sourceTree = "<group>"; };
 		80B763E01BA26A8F002B4B97 /* 书架Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "书架Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B763E41BA26A8F002B4B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B763E51BA26A8F002B4B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,8 +48,6 @@
 		80B763FF1BA26A90002B4B97 /* __DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __DemoTests.m; sourceTree = "<group>"; };
 		80B7640B1BA2707B002B4B97 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		80B7640C1BA2707B002B4B97 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		80D3FC251BA2BBFD00BA467C /* ZXHDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXHDecorationView.h; sourceTree = "<group>"; };
-		80D3FC261BA2BBFD00BA467C /* ZXHDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXHDecorationView.m; sourceTree = "<group>"; };
 		80D3FC281BA2D5F700BA467C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		80D3FC291BA2D5F700BA467C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		80D3FC2A1BA2D5F700BA467C /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -71,6 +71,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80B739841D2D099A00068097 /* ZXHDecorationView */ = {
+			isa = PBXGroup;
+			children = (
+				80B739851D2D099A00068097 /* ZXHCollectionView.h */,
+				80B739861D2D099A00068097 /* ZXHCollectionView.m */,
+				80B739871D2D099A00068097 /* ZXHDecorationView.h */,
+				80B739881D2D099A00068097 /* ZXHDecorationView.m */,
+			);
+			path = ZXHDecorationView;
+			sourceTree = "<group>";
+		};
 		80B763D71BA26A8F002B4B97 = {
 			isa = PBXGroup;
 			children = (
@@ -92,10 +103,7 @@
 		80B763E21BA26A8F002B4B97 /* 书架Demo */ = {
 			isa = PBXGroup;
 			children = (
-				80D3FC251BA2BBFD00BA467C /* ZXHDecorationView.h */,
-				80D3FC261BA2BBFD00BA467C /* ZXHDecorationView.m */,
-				80B739801D2CEB3700068097 /* ZXHCollectionView.h */,
-				80B739811D2CEB3700068097 /* ZXHCollectionView.m */,
+				80B739841D2D099A00068097 /* ZXHDecorationView */,
 				80B7640B1BA2707B002B4B97 /* MainViewController.h */,
 				80B7640C1BA2707B002B4B97 /* MainViewController.m */,
 				80D3FC281BA2D5F700BA467C /* DetailViewController.h */,
@@ -242,9 +250,9 @@
 				80D3FC2B1BA2D5F700BA467C /* DetailViewController.m in Sources */,
 				80B763E91BA26A8F002B4B97 /* AppDelegate.m in Sources */,
 				80B7640D1BA2707B002B4B97 /* MainViewController.m in Sources */,
-				80B739821D2CEB3700068097 /* ZXHCollectionView.m in Sources */,
+				80B7398A1D2D099A00068097 /* ZXHDecorationView.m in Sources */,
 				80B763E61BA26A8F002B4B97 /* main.m in Sources */,
-				80D3FC271BA2BBFD00BA467C /* ZXHDecorationView.m in Sources */,
+				80B739891D2D099A00068097 /* ZXHCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

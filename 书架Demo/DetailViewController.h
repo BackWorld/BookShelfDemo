@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^CloseCallBackBlock)(void);
+
 @interface DetailViewController : UIViewController
 
+@property(nonatomic, copy) CloseCallBackBlock closeBlock;
 
 @end

@@ -30,6 +30,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    detailVC = nil;
     itemsSection = 6;
 }
 
@@ -65,19 +66,77 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    self.navigationController.navigationBar.hidden = YES;
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
     detailVC = [[DetailViewController alloc]initWithNibName:@"DetailViewController" bundle:nil];
-    detailVC.view.frame = self.view.frame;
-    detailVC.view.transform = CGAffineTransformMakeScale(0.1, 0.1);
-    detailVC.view.alpha = 0;
-    [self addChildViewController:detailVC];
+    detailVC.view.frame = window.bounds;
     [self.view addSubview:detailVC.view];
     
+    __weak typeof(self) weakSelf = self;
+    __block typeof(DetailViewController) *vc = detailVC;
+    detailVC.closeBlock = ^(void){
+        [weakSelf pagePositionZoomCloseAnimationWithCell:cell view:vc.view];
+    };
+
+    [self pagePositionZoomOpenAnimationWithCell:cell view:detailVC.view];
+}
+
+#pragma mark 动画
+// point缩放动画
+// open
+-(void)pagePositionZoomOpenAnimationWithCell:(UICollectionViewCell*)cell view:(UIView*)view{
+    view.transform = CGAffineTransformMakeScale(cell.frame.size.width/view.frame.size.width, cell.frame.size.height/view.frame.size.height);
+    
+    CGFloat x = cell.center.x;
+    CGFloat y = cell.frame.origin.y - self.collectionView.contentOffset.y + cell.frame.size.height/2;
+    view.center = CGPointMake(x, y);
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [UIView animateWithDuration:0.3 animations:^{
-        detailVC.view.transform = CGAffineTransformMakeScale(1, 1);
-        detailVC.view.alpha = 1;
+        view.transform = CGAffineTransformMakeScale(1, 1);
+        view.center = window.center;
+    } completion:^(BOOL finished) {
+        [self addChildViewController:detailVC];
     }];
 }
 
+// close
+-(void)pagePositionZoomCloseAnimationWithCell:(UICollectionViewCell*)cell view:(UIView*)view{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    view.transform = CGAffineTransformMakeScale(1, 1);
+    view.center = window.center;
+    
+    CGFloat x = cell.center.x;
+    CGFloat y = cell.frame.origin.y - self.collectionView.contentOffset.y + cell.frame.size.height/2;
+    [UIView animateWithDuration:0.3 animations:^{
+        view.transform = CGAffineTransformMakeScale(cell.frame.size.width/view.frame.size.width, cell.frame.size.height/view.frame.size.height);
+        view.center = CGPointMake(x, y);
+    } completion:^(BOOL finished) {
+        [detailVC.view removeFromSuperview];
+        [detailVC removeFromParentViewController];
+    }];
+}
+
+// 水波动画
+-(void)pageRippleAnimation:(UIView*)view{
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.8;
+    transition.type = @"rippleEffect";
+    // rippleEffect | cube | pageCurl | pageUnCurl | suckEffect | oglFlip | moveIn | fade | reveal
+    [view.layer addAnimation:transition forKey:nil];
+}
+
+// center缩放动画
+-(void)pageCenterScaleAnimation:(UIView*)view{
+    view.frame = self.view.frame;
+    view.transform = CGAffineTransformMakeScale(0.1, 0.1);
+    view.alpha = 0;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        view.transform = CGAffineTransformMakeScale(1, 1);
+        view.alpha = 1;
+    }];
+}
 
 @end

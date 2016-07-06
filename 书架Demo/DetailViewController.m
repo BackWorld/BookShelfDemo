@@ -39,18 +39,18 @@
 }
 
 - (IBAction)dismiss:(UIButton *)sender {
-    [UIView animateWithDuration:0.3 animations:^{
-        self.view.transform = CGAffineTransformMakeScale(0.1, 0.1);
-        self.view.alpha = 0;
-    }completion:^(BOOL finished) {
-        [self.view removeFromSuperview];
-    }];
-    
+    if (_closeBlock) {
+        _closeBlock();
+    }
 }
 
 
 - (IBAction)addDownload:(id)sender {
     
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 
