@@ -1,6 +1,15 @@
 # BookShelfDemo
 书架collectionView
 
+# preview image
+![image](6s-por.png)
+___
+![image](6s-lan.png)
+___
+![image](ipad-por.png)
+___
+![image](ipad-lan.png)
+___
 # Usage 用法
 ### 1 将ZXHDecorationView 文件夹拖入你的工程并参考下面步骤
 ### 2 新建的cllectionView必须继承自ZXHCollectionView
